@@ -1,0 +1,76 @@
+# --- Python bytecode / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Packaging / build
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# --- Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env/
+.pdm-python
+.python-version
+
+# --- Tools / lockfiles
+poetry.lock
+Pipfile.lock
+pip-wheel-metadata/
+
+# --- Test / coverage / tox
+.pytest_cache/
+.coverage
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.tox/
+htmlcov/
+
+# --- Jupyter
+.ipynb_checkpoints
+.profile_default/
+.ipython/
+
+# --- Data / artifacts
+*.sqlite3
+*.db
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+
+# --- Media / models (opt-in commit)
+models/
+checkpoints/
+*.pt
+*.pth
+
+# --- IDE / Editor
+.vscode/
+.idea/
+*.sublime-*
+*.code-workspace
+
+# --- OS files
+.DS_Store
+Thumbs.db
+
+# --- Env / secrets (store in a secure secret manager)
+.env
+*.env
+.env.*
+*.pem
+*.key
+*.crt
+secrets*.json
