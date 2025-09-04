@@ -356,15 +356,20 @@ async def clear_conversation_history(
         logger.error(f"❌ Error clearing conversation: {e}")
         raise HTTPException(status_code=500, detail="Error clearing conversation")
 
-# API Info endpoint
 @router.get("/")
-async def root():
+async def serve_chat():
+    # Assuming chat.html is in project root
+    return FileResponse(os.path.join(os.path.dirname(__file__), "..", "chat.html"))
+
+# Keep your old JSON response at another endpoint
+@router.get("/info")
+async def root_info():
     return {
         "message": "🤖 AI Chatbot API v2.0",
         "description": "Enhanced chatbot with multi-function calling capabilities",
         "features": [
             "Real-time web search",
-            "Image search and display", 
+            "Image search and display",
             "Latest news retrieval",
             "Biography information",
             "Current date/time",
@@ -379,7 +384,7 @@ async def root():
             "GET /chatbot/stream-v2": "Enhanced streaming with better error handling",
             "WebSocket /voice/chat": "Voice chat with real-time audio",
             "GET /conversations/{session_id}": "Get conversation history",
-            "DELETE /conversations/{session_id}": "Clear conversation history", 
+            "DELETE /conversations/{session_id}": "Clear conversation history",
             "POST /transcribe": "Transcribe audio to text using Whisper",
             "GET /health": "Health check"
         },
