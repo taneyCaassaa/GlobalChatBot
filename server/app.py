@@ -32,9 +32,6 @@ logger = logging.getLogger(__name__)
 
 # Enable CORS
 origins = [
-    "http://localhost:3000",
-    "http://localhost:8501",
-    "http://127.0.0.1:8501",
     "*"  # Remove in production
 ]
 
