@@ -18,7 +18,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 SERP_API_KEY = os.getenv("SERP_API_KEY") or os.getenv("SERPAPI_KEY")
 GNEWS_API_KEY = os.getenv("GNEWS_API_KEY")
 REDIS_URL = os.getenv("REDIS_URL")
-redis_client = redis.Redis.from_url(redis_url, decode_responses=True)
+redis_client = redis.Redis.from_url(REDIS_URL, decode_responses=True)
 
 # Log API key status
 logger.info("API Keys Status:")
