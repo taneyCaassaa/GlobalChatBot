@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 import logging
 from openai import AsyncOpenAI
+import redis
 
 load_dotenv()
 
