@@ -6,6 +6,7 @@ from server.rate_limiter import limiter
 from server.dependencies import get_redis, get_mongo
 from backend.voice_functions import transcribe_audio, detect_voice_activity
 from backend.chat_handlers import stream_chat_response, handle_chat_request
+import os
 
 from backend.config import logger
 from fastapi import APIRouter
