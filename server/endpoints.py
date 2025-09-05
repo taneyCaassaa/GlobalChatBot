@@ -1,5 +1,5 @@
 from fastapi import Depends, Request, HTTPException, Query
-from fastapi.responses import StreamingResponse, JSONResponse, Response
+from fastapi.responses import StreamingResponse, JSONResponse, Response, FileResponse
 import asyncio
 import json
 from server.rate_limiter import limiter
